@@ -12,16 +12,30 @@ function Access() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        textAlign: "center",
       }}
     >
       <Typography sx={{ opacity: "60%" }} variant="h3" component={motion.h3}>
         <b>Access Clipboard anywhere</b>
       </Typography>
-      <Typography sx={{ opacity: "50%" }}>
-        Whether you're on the go, or at your computer, you can access all your
-        Clipboard snippets in a few clicks.
-      </Typography>
-      <Box component={motion.img} src={devices} />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Typography
+          sx={{ opacity: "50%", textAlign: "center", width: {xs:'58%' ,sm: "55%" } }}
+        >
+          Whether you're on the go, or at your computer, you can access all your
+          Clipboard snippets in a few clicks.
+        </Typography>
+      </Box>
+      <Box
+        component={motion.img}
+        src={devices}
+        sx={{ width: {xs:'340px', sm: "700px" } }}
+      />
     </Stack>
   );
 }

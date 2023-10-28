@@ -22,7 +22,7 @@ function Clipboard() {
   });
   return (
     <Stack
-      spacing={2}
+      spacing={3}
       sx={{
         marginTop: "40px",
         display: "flex",
@@ -39,7 +39,9 @@ function Clipboard() {
           alignItems: "center",
         }}
       >
-        <Typography sx={{ opacity: "50%", width: { xs: "70%", sm: "80%", lg:'40%' } }}>
+        <Typography
+          sx={{ opacity: "50%", width: { xs: "70%", sm: "70%", lg: "40%" } }}
+        >
           Available for free on the App Store. Download for Mac or iOS, sync
           with iCloud and you're ready to start adding to your clipboard.
         </Typography>
@@ -49,33 +51,38 @@ function Clipboard() {
         sx={{ display: "flex", justifyContent: "center" }}
         spacing={3}
       >
-        <ThemeProvider theme={theme}>
-          <Button
-            sx={{
-              textTransform: "none",
-              padding: "10px",
-              borderRadius: "28px",
-              color: "white",
-            }}
-            variant="contained"
-          >
-            <b>Download for iOS</b>
-          </Button>
-        </ThemeProvider>
+        <Box>
+          <ThemeProvider theme={theme}>
+            <Button
+              sx={{
+                textTransform: "none",
+                padding: "10px",
+                borderRadius: "28px",
+                color: "white",
+              }}
+              variant="contained"
+            >
+              <b>Download for iOS</b>
+            </Button>
+          </ThemeProvider>
+        </Box>
 
-        <ThemeProvider theme={theme}>
-          <Button
-            sx={{
-              textTransform: "none",
-              borderRadius: "28px",
-              color: "white",
-            }}
-            variant="contained"
-            color="secondary"
-          >
-            <b>Download for Mac</b>
-          </Button>
-        </ThemeProvider>
+        <Box>
+          <ThemeProvider theme={theme}>
+            <Button
+              sx={{
+                padding: "10px",
+                textTransform: "none",
+                borderRadius: "28px",
+                color: "white",
+              }}
+              variant="contained"
+              color="secondary"
+            >
+              <b>Download for Mac</b>
+            </Button>
+          </ThemeProvider>
+        </Box>
       </Stack>
     </Stack>
   );

@@ -20,7 +20,7 @@ function Super() {
         textAlign: "center",
       }}
     >
-      <Stack>
+      <Stack spacing={2}>
         <Typography sx={{ opacity: "60%" }} variant="h3" component={motion.h3}>
           {" "}
           <b>Supercharge your flow</b>{" "}
@@ -31,7 +31,7 @@ function Super() {
         </Typography>
       </Stack>
 
-      <Stack direction={{ lg: "row" }}>
+      <Stack direction={{ lg: "row" }} sx={{ gap: { xs: 3, sm: 4 } }}>
         <Stack
           spacing={2}
           sx={{
@@ -44,10 +44,12 @@ function Super() {
             src={Blacklist}
             sx={{ width: { lg: "100px" } }}
           />
-          <Typography variant='h5' sx={{opacity:'70%'}}>
+          <Typography variant="h5" sx={{ opacity: "70%" }}>
             <b>Create blacklists</b>
           </Typography>
-          <Typography sx={{ width: { lg: "50%" }, opacity:'50%' }}>
+          <Typography
+            sx={{ width: { xs: "58%", sm: "60%", lg: "50%" }, opacity: "50%" }}
+          >
             Ensure sensitive information never makes its way to your clipboard
             by excluding certain sources.
           </Typography>
@@ -64,10 +66,12 @@ function Super() {
             src={Text}
             sx={{ width: { lg: "100px" } }}
           />
-          <Typography variant='h5' sx={{opacity:'70%'}}>
+          <Typography variant="h5" sx={{ opacity: "70%" }}>
             <b>Plain text snippets</b>
           </Typography>
-          <Typography sx={{ width: { lg: "50%" }, opacity:'50%' }}>
+          <Typography
+            sx={{ width: { xs: "58%", sm: "57%", lg: "50%" }, opacity: "50%" }}
+          >
             Remove unwanted formatting from copied text for a consistent look.
           </Typography>
         </Stack>
@@ -83,33 +87,59 @@ function Super() {
             src={Preview}
             sx={{ width: { lg: "100px" } }}
           />
-          <Typography variant='h5' sx={{opacity:'70%'}}>
+          <Typography variant="h5" sx={{ opacity: "70%" }}>
             <b>Sneak preview</b>
           </Typography>
-          <Typography sx={{ width: { lg: "50%" }, opacity:'50%' }}>
+          <Typography
+            sx={{ width: { xs: "58%", sm: "50%", lg: "50%" }, opacity: "50%" }}
+          >
             Quick preview of all snippets on your Clipboard for easy access.
           </Typography>
         </Stack>
       </Stack>
 
-      <Stack direction={{ lg: "row" }} sx={{ justifyContent: "space-evenly" }}>
-        <Box
-          component={motion.img}
-          src={Google}
-          sx={{ height: { lg: "30px" } }}
-        />
-        <Box component={motion.img} src={IBM} sx={{ height: { lg: "30px" } }} />
-        <Box
-          component={motion.img}
-          src={Microsoft}
-          sx={{ height: { lg: "30px" } }}
-        />
-        <Box component={motion.img} src={Hp} sx={{ height: { lg: "35px" } }} />
-        <Box
-          component={motion.img}
-          src={Vector}
-          sx={{ height: { lg: "30px" } }}
-        />
+      <Stack
+        spacing={{ xs: 4 }}
+        direction={{ sm: "row", lg: "row" }}
+        sx={{ justifyContent: "space-evenly" }}
+      >
+        <Box>
+          <Box
+            component={motion.img}
+            src={Google}
+            sx={{ height: { sm: "25px", lg: "30px" } }}
+          />
+        </Box>
+
+        <Box>
+          <Box
+            component={motion.img}
+            src={IBM}
+            sx={{ height: { sm: "25px", lg: "30px" } }}
+          />
+        </Box>
+
+        <Box>
+          <Box
+            component={motion.img}
+            src={Microsoft}
+            sx={{ height: { sm: "24px", lg: "30px" } }}
+          />
+        </Box>
+        <Box>
+          <Box
+            component={motion.img}
+            src={Hp}
+            sx={{ height: { sm: "30px", lg: "35px" } }}
+          />
+        </Box>
+        <Box>
+          <Box
+            component={motion.img}
+            src={Vector}
+            sx={{ height: { sm: "24px", lg: "30px" } }}
+          />
+        </Box>
       </Stack>
     </Stack>
   );

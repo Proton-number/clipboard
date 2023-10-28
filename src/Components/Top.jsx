@@ -24,7 +24,7 @@ function Top() {
 
   return (
     <Box
-      id='top'
+      id="top"
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -33,8 +33,7 @@ function Top() {
         marginBottom: "40px",
       }}
     >
-       
-      <Stack spacing={6} sx={{ marginTop: "40px",}}> 
+      <Stack spacing={6} sx={{ marginTop: "40px" }}>
         <Box>
           <Box
             component={motion.img}
@@ -61,7 +60,44 @@ function Top() {
           </Typography>
         </Box>
 
-      
+        <Stack
+          direction={{ sm: "row", xs: "column" }}
+          sx={{ display: "flex", justifyContent: "center" }}
+          spacing={3}
+        >
+          <Box>
+            <ThemeProvider theme={theme}>
+              <Button
+                sx={{
+                  textTransform: "none",
+                  padding: { xs: "16px", sm: "10px" },
+                  borderRadius: "28px",
+                  color: "white",
+                }}
+                variant="contained"
+              >
+                <b>Download for iOS</b>
+              </Button>
+            </ThemeProvider>
+          </Box>
+
+          <Box>
+            <ThemeProvider theme={theme}>
+              <Button
+                sx={{
+                  padding: { xs: "16px", sm: "10px" },
+                  textTransform: "none",
+                  borderRadius: "28px",
+                  color: "white",
+                }}
+                variant="contained"
+                color="secondary"
+              >
+                <b>Download for Mac</b>
+              </Button>
+            </ThemeProvider>
+          </Box>
+        </Stack>
       </Stack>
     </Box>
   );
